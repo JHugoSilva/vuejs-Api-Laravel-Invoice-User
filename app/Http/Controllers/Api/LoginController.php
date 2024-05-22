@@ -16,7 +16,7 @@ class LoginController extends Controller
         if (!auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
 
             return response()->json([
-                'msg' => 'Usuário não autorizado'
+                'msg' => ['Usuario nao autorizado']
             ], Response::HTTP_UNAUTHORIZED);
         }
 
